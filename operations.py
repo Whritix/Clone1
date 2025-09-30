@@ -4,8 +4,16 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error! Division by zero."
+    return a / b
+
 def main():
-    print("=== Addition and Subtraction ===")
+    print("=== Arithmatic Operator ===")
     try:
         a = float(input("Enter first number: "))
         b = float(input("Enter second number: "))
@@ -15,6 +23,8 @@ def main():
 
     print(f"{a} + {b} = {add(a, b)}")
     print(f"{a} - {b} = {subtract(a, b)}")
+    print(f"{a} * {b} = {multiply(a, b)}")
+    print(f"{a} / {b} = {divide(a, b)}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
